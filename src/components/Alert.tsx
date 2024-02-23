@@ -11,7 +11,7 @@ const Alert = ({ children, onClose }: props) => {
       <button
         type="button"
         className="btn-close"
-        onClick={() => onClose}
+        onClick={onClose}
         data-bs-dismiss="alert"
         aria-label="Close"
       ></button>

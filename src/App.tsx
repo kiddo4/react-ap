@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       {alertVisible && (
-        <Alert>
+        <Alert onClose={() => setAlertVisibility(false)}>
           Hello <span>World</span>
         </Alert>
       )}

@@ -1,9 +1,15 @@
-interface props {
-  text: string;
+interface Props {
+  children: string;
+  color?: string;
+  onClick: () => void;
 }
 
-function Button({ text }: props) {
-  return <button className="btn btn-primary">{text}</button>;
+function Button({ children, onClick, color = "primary" }: Props) {
+  return (
+    <button className={"btn btn-" + color} onClick={onClick}>
+      {children}
+    </button>
+  );
 }
 
 export default Button;
